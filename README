@@ -1,0 +1,68 @@
+# EcoTweet Sentiment Analysis with BERT
+
+This project applies **Natural Language Processing (NLP)** techniques to perform **sentiment analysis** on tweets discussing **eco-friendly and sustainable products**, such as biodegradable packaging, reusable bottles, and compostable materials.
+
+I use **BERT (Bidirectional Encoder Representations from Transformers)** — a deep learning model by Google that understands context in both directions — and fine-tune it specifically on tweets about sustainability. The goal is to predict whether a tweet expresses a **positive** or **negative** sentiment about a green product.
+
+This analysis helps in identifying **consumer attitudes**, tracking **greenwashing**, and informing **sustainability-focused business and policy decisions**.
+ 
+
+
+
+##  Project Objective
+
+To build and fine-tune a BERT-based sentiment classifier that can detect **positive** or **negative** sentiments in eco-related tweets. This helps in identifying public perception, detecting green washing, and supporting sustainable product development.
+
+---
+
+##  Project Structure
+
+eco_tweet_sentiment/
+│
+├── data/    # Raw and synthetic tweet datasets
+├── models/    # Fine-tuned BERT model outputs
+├── notebooks/    # Main Jupyter/Colab notebook
+├── venv/          # Python virtual environment
+├── .gitignore     # Ignore model checkpoints, cache, etc.
+├── README.md      # Project description and instructions
+└── requirements.txt    # Python package dependencies
+
+
+##  Dataset
+
+We use two types of tweet data:
+1. **Pre-labeled tweets** from `nltk.twitter_samples`:
+   - 5,000 positive tweets
+   - 5,000 negative tweets
+
+2. **Synthetic eco-tweets**:
+   - 500 positive eco tweets (generated)
+   - 500 negative eco tweets (generated)
+
+---
+
+##  Methods & Tools
+
+| Step | Description |
+|------|-------------|
+| **Data Loading** | Load NLTK twitter samples |
+| **Text Preprocessing** | Lowercasing, tokenization, padding |
+| **Model** | `bert-base-uncased` from Hugging Face |
+| **Fine-Tuning** | BERT fine-tuned on synthetic eco tweets |
+| **Evaluation** | Accuracy, loss, predictions on custom tweets |
+
+---
+
+##  Libraries Used
+
+- [`transformers`](https://huggingface.co/transformers/)
+- [`torch`](https://pytorch.org/)
+- [`nltk`](https://www.nltk.org/)
+- [`scikit-learn`](https://scikit-learn.org/)
+- `pandas`, `matplotlib`
+- `wandb` (for experiment tracking, optional)
+
+
+author: Henok Yoseph
+Email: henokapril@gmail.com 
+github: https://github.com/aprilyab
